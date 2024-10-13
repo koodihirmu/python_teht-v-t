@@ -24,3 +24,14 @@ class Talo:
         except:
             print("Invalid elevator id")
             return
+
+    def fireAlarm(self) -> None:
+        print("Firealarm all elevators are send to bottom floor")
+        for hissi in self.hissit:
+            hissi.moveTofloor(0)
+
+    def print(self) -> None:
+        print(f"Talon hissit ovat kerroksissa: ", end="")
+        for hissi in self.hissit:
+            print(f"{hissi.currentFloor} ", end="")
+        print()
