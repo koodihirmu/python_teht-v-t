@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 @app.route("/isprime/<number>")
 def isprime(number: int) -> Response:
+    """
+    checks if a number is a prime
+    :param number: number to check
+    """
     # trying to errorhandle
     try:
         isPrime = True
@@ -33,6 +37,9 @@ def isprime(number: int) -> Response:
 
 @app.errorhandler(404)
 def errorhandler(_) -> Response:
+    """
+    handles errors when address is incorrect
+    """
     answer = {"status": 404, "text": "Invalid enpoint"}
     jsonAnswer = json.dumps(answer)
     return Response(response=jsonAnswer, status=404, mimetype="application/json")
