@@ -156,6 +156,7 @@ cython_debug/
 
 # For making scrapbook code
 test_*
+secret.json
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
